@@ -67,6 +67,7 @@
 
 <h1> <strong> Training Script </strong> </h1>
 <p style="text-indent: 2em;">
+    Within the Training Script, all of the modules come together to achieve model convergence through iterative parameter refinement. Initially, we split the data set into a nested loop of epochs and batch iterations. For every batch processed we apply the 3 step cycle which defines the model: the inference, the loss calculations and the backward pass. The model predicts the positions of the objects, then computes the loss function to quantify the discrepancies between its response and the ground truth. With the backward pass (the learning step) calculates the gradients of the loss with respect to all the model parameters thereby determining the optimal direction for parameter adjustment. The Adam optimizer applies these gradients, refining the model's internal weights to minimize the calculated error in the next iteration. This module is responsible for model stability and that the performance metrics are logged, assuring convergence.
 </p>
 
 <h1> <strong> Non-Maximum Suppresion </strong> </h1>
@@ -75,6 +76,10 @@
 
 </p>
 
+<h1> <strong> Accuracy Metrics & Performance </strong> </h1>
+<p style="text-indent: 2em;">
+</p>
+    To evaluate the performance of the model, I will use Mean Average Precision (mAP) which serves as a rigorous and comprehensive metric that measures both the accuracy of object recognition and the precision of geometric localization. For every class, predictions are ordered by confidence and used to generate de precision-recall curve that captures performance across varying confidence thresholds. The average precision corresponds to the area under this curve for a single class which gives us the final metric: the mean of all values.
 
 </body>
 </html>
