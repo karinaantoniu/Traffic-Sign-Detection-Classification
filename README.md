@@ -33,7 +33,7 @@
 
 <h1> <strong> Data Pipeline </strong> </h1>
 <p style="text-indent: 2em;">
-    
+    This module is responsible for translating raw input images into structured tensors with a specific format requested by the neural network. The image undergoes essential pre-processing procedure such as resizing to the 448x448 dimensional space, followed by normalization and instantiation as a torch tensor. We then process the coresponding annotation file which outlines the ground truth for any present traffic sign. For each bounding box, we determine the responsible grid cell. This localization necessitates transforming the absolut coordinates into localized offsets which represent the object's center position relative to the cell's top left corner. We then create a tensor with theese coordinated and a one-hot encoding vector to specify the class of the object.
 </p>
 
 <h1> <strong> Loss Function </strong> </h1>
