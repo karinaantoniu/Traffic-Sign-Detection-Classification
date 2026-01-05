@@ -89,7 +89,6 @@
 <h1> <strong> Instructions </strong> </h1>
 <p style="text-indent: 2em;">
     To operate this module, first ensure all dependencies are installed. The training phase can be initiated by executing the training script, which processes the dataset and optimizes the model parameters over a specified number of epochs. Once converged, the system saves the weights, which can then be loaded by the inference script to generate bounding box predictions and class labels for any input image or video frame provided by the main application.
-
     To evaluate the model's inference capabilities, I implemented a prediction script that accepts a raw input image. The network localizes the objects and outputs their relative bounding box coordinates, which are subsequently visualized on the frame using OpenCV.
 </p>
 
