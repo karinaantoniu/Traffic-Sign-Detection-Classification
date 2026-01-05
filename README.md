@@ -93,7 +93,7 @@
 
 <h1> <strong> Implementation Challenges </strong> </h1>
 <p style="text-indent: 2em;">
-    A primary challenge encountered during the development phase was the precise tuning of hyperparameters. Achieving model stability required an iterative process of training validation. By consistently monitoring inference results on raw images, I was able to fine-tune these parameters to ensure optimal convergence and detection accuracy.
+    A primary challenge encountered during the development phase was the precise tuning of hyperparameters. Achieving model stability required an iterative process of training validation. By consistently monitoring inference results on raw images, I was able to fine-tune these parameters to ensure optimal convergence and detection accuracy. <br> Initially, I attempted to implement the full YOLOv1 architecture. However, due to computational constraints and hardware limitations, the original model proved too resource-intensive for training. Consequently, I optimized the network by pruning specific layers and reducing filter dimensions to create a lightweight variant that ensures stable execution." 
 </p>
 
 </body>
