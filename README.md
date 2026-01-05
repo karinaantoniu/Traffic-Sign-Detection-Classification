@@ -78,8 +78,25 @@
 
 <h1> <strong> Accuracy Metrics & Performance </strong> </h1>
 <p style="text-indent: 2em;">
-</p>
     To evaluate the performance of the model, I will use Mean Average Precision (mAP) which serves as a rigorous and comprehensive metric that measures both the accuracy of object recognition and the precision of geometric localization. For every class, predictions are ordered by confidence and used to generate de precision-recall curve that captures performance across varying confidence thresholds. The average precision corresponds to the area under this curve for a single class which gives us the final metric: the mean of all values.
+</p>
+
+<h1> <strong> Technologies used </strong> </h1>
+<p style="text-indent: 2em;">
+    The implementation of this detection subsystem relies on Python as the primary language, utilizing the PyTorch framework for building and training the deep neural network. Essential libraries include NumPy for high-performance matrix operations and linear algebra, particularly for IoU calculations, and OpenCV for image pre-processing and visualization. Additionally, Torchvision is used for data augmentation, while Matplotlib handles the plotting of loss metrics to monitor training convergence.
+</p>
+
+<h1> <strong> Instructions </strong> </h1>
+<p style="text-indent: 2em;">
+    To operate this module, first ensure all dependencies are installed. The training phase can be initiated by executing the training script, which processes the dataset and optimizes the model parameters over a specified number of epochs. Once converged, the system saves the weights, which can then be loaded by the inference script to generate bounding box predictions and class labels for any input image or video frame provided by the main application.
+
+    To evaluate the model's inference capabilities, I implemented a prediction script that accepts a raw input image. The network localizes the objects and outputs their relative bounding box coordinates, which are subsequently visualized on the frame using OpenCV.
+</p>
+
+<h1> <strong> Implementation Challenges </strong> </h1>
+<p style="text-indent: 2em;">
+    A primary challenge encountered during the development phase was the precise tuning of hyperparameters. Achieving model stability required an iterative process of training validation. By consistently monitoring inference results on raw images, I was able to fine-tune these parameters to ensure optimal convergence and detection accuracy.
+</p>
 
 </body>
 </html>
